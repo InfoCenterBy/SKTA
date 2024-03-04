@@ -63,7 +63,8 @@
                          try {
                               const response = await fetch(`html-comp/${key}.html`);
                               if (!response.ok) {
-                                   throw new Error('Failed to load HTML file');
+                                   // throw new Error('Failed to load HTML file');
+                                   const response = await fetch(`https://raw.githubusercontent.com/InfoCenterBy/SKTA/gh-pages/html-comp/${key}.html`);
                               }
 
                                                                  const htmlContent = await response.text();
