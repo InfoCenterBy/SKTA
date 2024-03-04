@@ -62,19 +62,13 @@
                     async loadHtml(key) {
                          try {
                               const location = window.location
-                              if(location.host == "infocenterby.github.io"){
-                                   const response = await fetch(`https://raw.githubusercontent.com/InfoCenterBy/SKTA/gh-pages/html-comp/${key}.html`);
-                                   if (!response.ok) {
-                                        throw new Error('Failed to load HTML file');
-                                   }
-                              }else{
-                                   const response = await fetch(`html-comp/${key}.html`);
-                                   if (!response.ok) {
-                                        throw new Error('Failed to load HTML file');
-                                   }
+                              const response = location.host == "infocenterby.github.io" ? await fetch(`https://raw.githubusercontent.com/InfoCenterBy/SKTA/gh-pages/html-comp/${key}.html`) : await fetch(`html-comp/${key}.html`);
+                              
+                              if (!response.ok) {
+                                   throw new Error('Failed to load HTML file');
                               }
 
-                                                                 const htmlContent = await response.text();
+                              const htmlContent = await response.text();
                               this.$set(this.htmlData, key, htmlContent);
                          } catch (error) {
                               console.error(error);
