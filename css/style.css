@@ -526,6 +526,14 @@ main {
   font-size: 16px;
 }
 
+.modal-content {
+  border-radius: 0;
+}
+
+.bi {
+  color: var(--color-black);
+}
+
 .ui-page {
   padding-bottom: 300px;
 }
