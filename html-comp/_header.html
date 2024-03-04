@@ -1,0 +1,145 @@
+<header class="header row justify-content-between w-100 align-items-start align-items-lg-center">
+     <div class="header-logo d-flex flex-row align-items-center col-xl-3 col-lg-1 col-3">
+          <picture>
+               <source media="(min-width: 1200px)" srcset="./img/svg/header-logo.svg">
+               <img src="./img/png/header-logo.png" alt="header-logo">
+          </picture>
+          <p class="mb-0 ms-2 d-xl-block d-none">
+               Республиканское унитарное предприятие <br> «Информационно-издательский центр <br> по налогам и сборам»
+          </p>
+     </div>
+     <div class="d-flex flex-column col-lg-11 col-xl-9 col-6">
+          <div class="d-flex flex-row w-100 justify-content-lg-between justify-content-center ">
+               <div class="search-block col-xl-5 col-lg-3 d-lg-block d-none">
+                    <form class="form-group d-flex flex-row align-items-center w-100">
+                         <div class="floating-label-content w-100">
+                              <input class="floating-input" type="text" placeholder="">
+                              <label class="floating-label">Поиск</label>
+                         </div>
+                         <div class="ms-2">
+                              <button class="button-serach" type="submit"></button>
+                         </div>
+                    </form>
+               </div>
+               <div class="d-lg-block d-none">
+                    <p class="mb-0 color-gray-txt ff-roboto fs-14">
+                         Пн-Чт: с 8:45 до 18:00 <br> 
+                         Пт: с 8:45 до 16:45
+                    </p>
+               </div>
+               <div class="d-flex flex-column justify-content-center">
+                    <a href="tel:+8 (017) 234–42–54" class="header-contact color-violet">8 (017) 234–42–54</a>
+                    <a href="mailto:info@ckta.by" class="header-contact color-violet">info@ckta.by</a>
+               </div>
+               <div class="d-lg-block d-none">
+                    <a href="https://new.ckta.by/" class="button button-full">
+                         Войти с ЭЦП
+                    </a>
+               </div>
+          </div>
+          <div class="w-100 mt-3 d-lg-block d-none">
+               <nav class="header-nav d-flex flex-row justify-content-between">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                         О системе
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                         Как подключиться
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                         Документы
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                         Тарифы и способы оплаты
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                         Вопрос-ответ
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                         Новости
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                         Контакты
+                    </a>
+               </nav>
+          </div>
+     </div>
+     <div class="d-lg-none d-flex justify-content-end align-items-start col-3">
+          <button class="mobile-search mobile-menu" type="button" data-bs-toggle="modal" data-bs-target="#mobileSearch">
+               <i class="bi bi-search"></i>
+          </button>
+          <button  type="button" class="mobile-btn mobile-menu" data-bs-toggle="modal" data-bs-target="#mobileMenu">
+               <i class="bi bi-list"></i>
+          </button>
+     </div>
+</header>
+
+<div class="modal fade" id="mobileMenu" tabindex="-1" aria-labelledby="mobileMenuLabel" aria-hidden="true">
+     <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content bg-violet">
+               <div class="modal-header bg-white px-4">
+                    <picture>
+                         <source media="(min-width: 1200px)" srcset="./img/svg/header-logo.svg">
+                         <img src="./img/png/header-logo.png" alt="header-logo">
+                    </picture>
+                    <div class="d-flex flex-column justify-content-center">
+                         <a href="tel:+8 (017) 234–42–54" class="header-contact color-violet">8 (017) 234–42–54</a>
+                         <a href="mailto:info@ckta.by" class="header-contact color-violet">info@ckta.by</a>
+                    </div>
+                    <div class="">
+                         <button class="mobile-search mobile-menu" type="button" data-bs-toggle="modal" data-bs-target="#mobileSearch">
+                              <i class="bi bi-search"></i>
+                         </button>
+                         <button type="button" class="btn-close ms-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+               </div>
+               <div class="modal-body px-4 d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column gap-3 mt-5">
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              О системе
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Как подключиться
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Документы
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Тарифы и способы оплаты
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Вопрос-ответ
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Новости
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              контакты
+                         </a>
+                         <div class="d-flex justify-content-start w-100 mt-4">
+                              <a href="#" class="button button-empty py-3 px-5 fs-18 w-100">Войти с ЭЦП</a>
+                         </div>
+                    </div>
+
+                                   </div>
+          </div>
+     </div>
+</div>
+
+<div class="modal fade" id="mobileSearch" tabindex="-1" aria-labelledby="mobileSearchLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+          <div class="modal-content px-sm-4 px-2">
+               <div class="modal-header">
+                    <form class="form-group d-flex flex-row align-items-center w-100">
+                         <div class="floating-label-content w-100">
+                              <input class="floating-input" type="text" placeholder="">
+                              <label class="floating-label">Поиск</label>
+                         </div>
+                         <div class="ms-2">
+                              <button class="button-serach" type="submit"></button>
+                         </div>
+                    </form>
+                    <button type="button" class="btn-close  ms-md-4 ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+          </div>
+     </div>
+</div>
