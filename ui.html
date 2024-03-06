@@ -52,7 +52,8 @@
                               '_buttons',
                               '_links',
                               '_bread-crumbs',
-                              '_inputs'
+                              '_inputs',
+                              '_heading'
                          ],
                          htmlData: {}
                     }
@@ -63,8 +64,8 @@
                          try {
                               const location = window.location
                               const response = location.host == "infocenterby.github.io" ? await fetch(`https://raw.githubusercontent.com/InfoCenterBy/SKTA/gh-pages/html-comp/${key}.html`) : await fetch(`html-comp/${key}.html`);
-                              
-                              if (!response.ok) {
+
+                                                            if (!response.ok) {
                                    throw new Error('Failed to load HTML file');
                               }
 
