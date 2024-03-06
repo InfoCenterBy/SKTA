@@ -424,6 +424,14 @@ component;
   content: "#";
 }
 
+.map-block {
+  overflow: hidden;
+}
+
+.map-block iframe {
+  min-height: 450px;
+}
+
 .modal-content {
   border-radius: 0;
 }
@@ -436,14 +444,6 @@ component;
   font-size: 1.75rem;
   line-height: 130%;
   letter-spacing: 0;
-}
-
-.map-block {
-  overflow: hidden;
-}
-
-.map-block iframe {
-  min-height: 450px;
 }
 
 html {
