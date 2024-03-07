@@ -1,5 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css");
-
 @import url("https://fonts.googleapis.com/css?family=Exo 2");
 
 @import url("https://fonts.googleapis.com/css?family=Roboto");
@@ -523,10 +521,6 @@ body {
   min-height: 100vh;
 }
 
-body a:hover {
-  color: var(--color-violet);
-}
-
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -941,7 +935,7 @@ a {
   }
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .button-empty:not(.button-disabled):hover,
   .button-arrow:not(.button-disabled):hover {
     border-color: var(--color-violet-hover);
@@ -1102,9 +1096,21 @@ a {
 }
 
 @media (hover: none) {
+  .button-empty:not(.button-disabled):hover,
+  .button-arrow:not(.button-disabled):hover {
+    pointer-events: none;
+  }
+
   .button-empty:not(.button-disabled):active,
   .button-arrow:not(.button-disabled):active {
     border-color: var(--color-violet-hover);
+  }
+
+  .button-full:not(.button-disabled):hover,
+  .button-empty:not(.button-disabled):hover,
+  .button-arrow:not(.button-disabled):hover,
+  .button-serach:not(.button-disabled):hover {
+    pointer-events: none;
   }
 
   .button-full:not(.button-disabled):active,
@@ -1114,6 +1120,13 @@ a {
     background-color: var(--color-violet-hover);
   }
 
+  .button-full:not(.button-disabled):hover,
+  .button-empty:not(.button-disabled):hover,
+  .button-arrow:not(.button-disabled):hover,
+  .button-serach:not(.button-disabled):hover {
+    pointer-events: none;
+  }
+
   .button-full:not(.button-disabled):active,
   .button-empty:not(.button-disabled):active,
   .button-arrow:not(.button-disabled):active,
@@ -1121,9 +1134,18 @@ a {
     color: var(--color-white);
   }
 
+  .link-header:hover {
+    pointer-events: none;
+  }
+
   .link-header:active {
     -webkit-text-decoration-color: var(--color-violet);
             text-decoration-color: var(--color-violet);
+  }
+
+  .link-header:hover,
+  .link:hover {
+    pointer-events: none;
   }
 
   .link-header:active,
@@ -1131,28 +1153,56 @@ a {
     color: var(--color-violet);
   }
 
+  .link-footer:hover {
+    pointer-events: none;
+  }
+
   .link-footer:active {
     color: var(--color-gold-light);
+  }
+
+  .header-contact:hover {
+    pointer-events: none;
   }
 
   .header-contact:active {
     color: var(--color-violet);
   }
 
+  .breadcrumbs a:hover {
+    pointer-events: none;
+  }
+
   .breadcrumbs a:active {
     color: var(--color-violet);
+  }
+
+  .floating-label-content:not(.floating-input-error) .floating-input:not(:focus, :disabled):hover {
+    pointer-events: none;
   }
 
   .floating-label-content:not(.floating-input-error) .floating-input:not(:focus, :disabled):active {
     border-color: var(--color-violet-hover);
   }
 
+  .news-block:hover {
+    pointer-events: none;
+  }
+
   .news-block:active {
     background-color: var(--color-white);
   }
 
+  .news-block:hover {
+    pointer-events: none;
+  }
+
   .news-block:active {
     border: 1.5px solid var(--color-violet);
+  }
+
+  .main-support-block:hover {
+    pointer-events: none;
   }
 
   .main-support-block:active {
@@ -1160,100 +1210,200 @@ a {
             filter: grayscale(0);
   }
 
+  .main-support-block:hover {
+    pointer-events: none;
+  }
+
   .main-support-block:active {
     color: var(--color-black);
+  }
+
+  .hover-red-error:hover {
+    pointer-events: none;
   }
 
   .hover-red-error:active {
     color: #E31B1B;
   }
 
+  .hover-bg-red-error:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-red-error:active {
     background-color: #E31B1B;
+  }
+
+  .hover-black:hover {
+    pointer-events: none;
   }
 
   .hover-black:active {
     color: #030303;
   }
 
+  .hover-bg-black:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-black:active {
     background-color: #030303;
+  }
+
+  .hover-white:hover {
+    pointer-events: none;
   }
 
   .hover-white:active {
     color: #FBFBFB;
   }
 
+  .hover-bg-white:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-white:active {
     background-color: #FBFBFB;
+  }
+
+  .hover-gray-txt:hover {
+    pointer-events: none;
   }
 
   .hover-gray-txt:active {
     color: #66605B;
   }
 
+  .hover-bg-gray-txt:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-gray-txt:active {
     background-color: #66605B;
+  }
+
+  .hover-gray-input:hover {
+    pointer-events: none;
   }
 
   .hover-gray-input:active {
     color: #B9B9B9;
   }
 
+  .hover-bg-gray-input:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-gray-input:active {
     background-color: #B9B9B9;
+  }
+
+  .hover-gray-stroke:hover {
+    pointer-events: none;
   }
 
   .hover-gray-stroke:active {
     color: #DADADA;
   }
 
+  .hover-bg-gray-stroke:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-gray-stroke:active {
     background-color: #DADADA;
+  }
+
+  .hover-gray-illustr:hover {
+    pointer-events: none;
   }
 
   .hover-gray-illustr:active {
     color: #F0F0F0;
   }
 
+  .hover-bg-gray-illustr:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-gray-illustr:active {
     background-color: #F0F0F0;
+  }
+
+  .hover-dark-violet:hover {
+    pointer-events: none;
   }
 
   .hover-dark-violet:active {
     color: #2A2B87;
   }
 
+  .hover-bg-dark-violet:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-dark-violet:active {
     background-color: #2A2B87;
+  }
+
+  .hover-violet:hover {
+    pointer-events: none;
   }
 
   .hover-violet:active {
     color: #5E60CE;
   }
 
+  .hover-bg-violet:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-violet:active {
     background-color: #5E60CE;
+  }
+
+  .hover-violet-hover:hover {
+    pointer-events: none;
   }
 
   .hover-violet-hover:active {
     color: #8C8EEA;
   }
 
+  .hover-bg-violet-hover:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-violet-hover:active {
     background-color: #8C8EEA;
+  }
+
+  .hover-violet-light:hover {
+    pointer-events: none;
   }
 
   .hover-violet-light:active {
     color: #D6D6FF;
   }
 
+  .hover-bg-violet-light:hover {
+    pointer-events: none;
+  }
+
   .hover-bg-violet-light:active {
     background-color: #D6D6FF;
   }
 
+  .hover-gold-light:hover {
+    pointer-events: none;
+  }
+
   .hover-gold-light:active {
     color: #F9B974;
+  }
+
+  .hover-bg-gold-light:hover {
+    pointer-events: none;
   }
 
   .hover-bg-gold-light:active {
