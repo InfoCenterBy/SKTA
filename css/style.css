@@ -521,6 +521,10 @@ body {
   min-height: 100vh;
 }
 
+a:hover {
+  color: inherit;
+}
+
 main {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -1216,6 +1220,10 @@ a {
 
   .main-support-block:active {
     color: var(--color-black);
+  }
+
+  a:hover {
+    pointer-events: none;
   }
 
   .hover-red-error:hover {
