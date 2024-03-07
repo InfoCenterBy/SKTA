@@ -1,21 +1,27 @@
 @import './ui-comp/header';
+@import './ui-comp/footer';
+@import './ui-comp/buttons';
+@import './ui-comp/links';
+@import './ui-comp/bread-crumbs';
+@import './ui-comp/inputs';
+@import './ui-comp/mobile-menu';
+@import './ui-comp/main-banner';
+@import './ui-comp/main-connect';
+@import './ui-comp/news-block';
+@import './ui-comp/main-contact';
+@import './ui-comp/main-support';
+@import './ui-comp/main-slider';
 
-.fs-12{
-     font-size: .75rem !important;
+.modal-content{
+     border-radius: 0;
 }
 
-.fs-14{
-     font-size: .875rem !important;
+.bi{
+     color: var(--color-black);
 }
 
-.fs-16{
-     font-size: 1rem !important;
-}
-
-.fs-18{
-     font-size: 1.125rem !important;
-}
-
-.fs-20{
-     font-size: 1.25rem !important;
+.h2-section {
+     font-size: 1.75rem;
+     line-height: 130%;
+     letter-spacing: 0;
 }

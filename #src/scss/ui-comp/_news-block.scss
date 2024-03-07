@@ -1,0 +1,28 @@
+.news-block {
+     text-decoration: none;
+     border: 1.5px solid transparent;
+     &__time {
+          width: fit-content;
+          padding: .25rem .75rem;
+          letter-spacing: 0;
+          display: grid;
+          place-items: center;
+     }
+     @include hover('background-color', var(--color-white));
+     @include hover('border', 1.5px solid var(--color-violet));
+
+     &__text {
+          // height: clamp(10rem, 50%, 10rem);
+          height: 10rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 7;
+          -webkit-box-orient: vertical;  
+          overflow: hidden;
+     }
+
+     &__hashtag {
+     }
+     &__hashtag::before {
+          content: '#';
+     }
+}

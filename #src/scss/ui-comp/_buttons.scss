@@ -1,0 +1,83 @@
+//buttons default
+.button {
+     padding: .75rem 1.5rem;
+     @media #{$ui-tablet} {
+          padding: .625rem .75rem;
+     }
+     border-radius: 6.25rem;
+     font-family: $ff-roboto;
+     @include adaptiv-value('font-size', 18, 14, 1);
+     font-weight: 400;
+     line-height: 120%;
+     letter-spacing: 0%;
+}
+
+.button, .button-arrow, .button-serach{
+     outline: 1.5px solid transparent;
+     border: 1.5px solid transparent;
+     box-sizing: border-box;
+     @include transition(#{$transition-3});
+     text-align: center;
+     text-decoration: none;
+     display: grid;
+     place-items: center;
+     cursor: pointer;
+     width: fit-content;
+}
+
+.button-full, .button-serach {
+     background-color: var(--color-violet);
+     color: var(--color-white);
+}
+.button-empty, .button-arrow {
+     background-color: var(--color-white);
+     color: var(--color-violet);
+     border-color: var(--color-violet);
+}
+.button-empty:not(.button-disabled), .button-arrow:not(.button-disabled){
+     @include hover('border-color', var(--color-violet-hover))
+
+}
+.button-full:not(.button-disabled), .button-empty:not(.button-disabled), .button-arrow:not(.button-disabled), .button-serach:not(.button-disabled){
+     @include hover('background-color', var(--color-violet-hover));
+     @include hover('color', var(--color-white));
+}
+.button-disabled.button-full, .button-disabled.button-serach {
+     background-color: var(--color-gray-stroke);
+     color: var(--color-white);
+}
+.button-disabled.button-empty, .button-disabled.button-arrow {
+     border-color: var(--color-gray-stroke);
+     color: var(--color-gray-stroke);
+}
+
+.button-disabled.button-full,.button-disabled.button-empty, .button-disabled.button-arrow, .button-disabled.button-serach {
+     cursor: not-allowed;
+}
+
+//arrows
+.button-arrow{
+     padding: .75rem;
+     @include adaptiv-value('font-size', 24, 18, 1);
+}
+.button-arrow, .button-serach{
+     border-radius: 50%;
+}
+.button-arrow::before, .button-serach::before {
+     @extend .bootsrtap-icon;
+}
+.button-left::before {
+     content: '\F12F';
+}
+.button-right::before {
+     content: '\F138';
+}
+.button-serach{
+     @include adaptiv-value('font-size', 22, 16, 1);
+     padding: .5rem;
+}
+.button-serach::before {
+     content: ' \F52A';
+}
+
+

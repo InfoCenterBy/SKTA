@@ -1,4 +1,5 @@
-let project_folder = require('path').basename(__dirname);
+let project_folder =
+     require('path').basename(__dirname);
 let source_folder = '#src';
 
 let fs = require('fs');
@@ -13,18 +14,27 @@ let path = {
           audio: project_folder + '/audio/',
      },
      src: {
-          html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
+          html: [
+               source_folder + '/**/*.html',
+               '!' + source_folder + '/_*.html',
+          ],
           css: source_folder + '/scss/style.scss',
           js: source_folder + '/js/script.js',
-          img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+          img:
+               source_folder +
+               '/img/**/*.{jpg,png,svg,gif,ico,webp}',
           fonts: source_folder + '/fonts/*.ttf',
           audio: source_folder + '/audio/*.mp3',
      },
      watch: {
           html: source_folder + '/**/*.html',
-          css: source_folder + '/scss/**/*.scss',
+          css:
+               source_folder +
+               '/scss/**/**/*.scss',
           js: source_folder + '/js/**/*.js',
-          img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
+          img:
+               source_folder +
+               '/img/**/*.{jpg,png,svg,gif,ico,webp}',
           audio: source_folder + '/audio/*.mp3',
      },
      clean: './' + project_folder + '/',
@@ -32,7 +42,8 @@ let path = {
 
 let { src, dest } = require('gulp'),
      gulp = require('gulp'),
-     browsersync = require('browser-sync').create(),
+     browsersync =
+          require('browser-sync').create(),
      fileinclude = require('gulp-file-include'),
      del = require('del'),
      scss = require('gulp-sass')(require('sass')),
@@ -52,7 +63,8 @@ strip = require('gulp-strip-comments');
 function browserSync(done) {
      browsersync.init({
           server: {
-               baseDir: './' + project_folder + '/',
+               baseDir:
+                    './' + project_folder + '/',
           },
           notify: false,
      });
@@ -76,7 +88,9 @@ function css() {
           .pipe(group_media())
           .pipe(
                autoprefixer({
-                    overrideBrowserslist: ['last 5 versions'],
+                    overrideBrowserslist: [
+                         'last 5 versions',
+                    ],
                     cascade: true,
                })
           )
@@ -110,7 +124,9 @@ function images() {
           .pipe(
                imagemin({
                     progressive: true,
-                    svgoPlugins: [{ removeViewBox: false }],
+                    svgoPlugins: [
+                         { removeViewBox: false },
+                    ],
                     interlaced: true,
                     optimizationLevel: 3, // 0 to 7
                })
@@ -126,8 +142,12 @@ function audio() {
 }
 
 function fonts() {
-     src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
-     return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
+     src(path.src.fonts)
+          .pipe(ttf2woff())
+          .pipe(dest(path.build.fonts));
+     return src(path.src.fonts)
+          .pipe(ttf2woff2())
+          .pipe(dest(path.build.fonts));
 }
 
 gulp.task('otf2ttf', function () {
@@ -142,7 +162,10 @@ gulp.task('otf2ttf', function () {
 
 gulp.task('svgSprite', function () {
      return gulp
-          .src([source_folder + '/iconsprite/*.svg'])
+          .src([
+               source_folder +
+                    '/iconsprite/*.svg',
+          ])
           .pipe(
                svgSprite({
                     mode: {
@@ -157,7 +180,9 @@ gulp.task('svgSprite', function () {
 });
 
 gulp.task('deploy', function () {
-     return gulp.src('./skta/**/*').pipe(deploy());
+     return gulp
+          .src('./skta/**/*')
+          .pipe(deploy());
 });
 
 function cb() {}
@@ -176,9 +201,20 @@ function clean(params) {
 
 let build = gulp.series(
      clean,
-     gulp.parallel(js, css, html, images, fonts, audio)
+     gulp.parallel(
+          js,
+          css,
+          html,
+          images,
+          fonts,
+          audio
+     )
 );
-let watch = gulp.parallel(build, watchFiles, browserSync);
+let watch = gulp.parallel(
+     build,
+     watchFiles,
+     browserSync
+);
 
 exports.fonts = fonts;
 exports.images = images;

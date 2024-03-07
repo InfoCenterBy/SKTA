@@ -1,28 +1,51 @@
 $minWidth: 320px;
 $maxWidth: 1920px;
-$maxWidthContainer: 1440;
+$maxWidthContainer: 1400;
 // $maxWidthContainerPersonal: 1830;
+@import '../functional/mixins';
 
 // *Colors*
+$colorsMap: ('red-error': '#E31B1B',
+               'black': '#030303',
+               'white': '#FBFBFB',
+               'gray-txt': '#66605B',
+               'gray-input': '#B9B9B9',
+               'gray-stroke': '#DADADA',
+               'gray-illustr': '#F0F0F0',
+               'dark-violet': '#2A2B87',
+               'violet': '#5E60CE',
+               'violet-hover': '#8C8EEA',
+               'violet-light': '#D6D6FF',
+               'gold-light': '#F9B974');
+               
 :root{
+     @each $name, $color in $colorsMap {
+          --color-#{$name}: #{$color}
+     }
 }
 // *------*
 
 
 // *! Fonts*
 $ff-exo: 'Exo 2';
+$ff-roboto: 'Roboto';
 $fontSize: 16px;
+$fontSizeMap: (10, 12, 14, 16, 18, 20, 22, 24);
 // *!------*
 
 // *? Border*
-$border-25: 25px;
-$border-20: 20px;
+$borderMap: ('15','20','25','30','100');
 // *?------*
 
 // *! Transition *
+$transitionMap: ( '2': '.2', '3': '.3');
 $transition-2: all ease-out .2s;
 $transition-3: all ease-out .3s;
 // *!------*
+
+//* Break-points*
+$breakPointsMap: ('xs':576,'sm':576,'md':768,'lg':992,'xl':1200,'xxl':1400);
+// *------*
 
 
 // *? Media rules*
@@ -49,4 +72,20 @@ $layer-modal: 4;
      vertical-align: -.125em;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
+}
+
+.hover-no{
+     pointer-events: none;
+}
+
+.cursor-pointer{
+     cursor: pointer
+}
+
+.ff-exo{
+     font-family: $ff-exo;
+}
+
+.ff-roboto{
+     font-family: $ff-roboto;
 }

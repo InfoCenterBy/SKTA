@@ -1,0 +1,14 @@
+.main-support {
+}
+.main-support-block {
+     filter: grayscale(1);
+     color: var(--color-gray-txt);
+     @include hover('filter', grayscale(0));
+	@include transition($transition-3);
+     @include hover('color', var(--color-black));
+     &__img {
+          img{
+               width: fit-content;
+          }
+	}
+}

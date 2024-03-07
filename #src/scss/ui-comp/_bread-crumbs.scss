@@ -1,0 +1,29 @@
+.breadcrumbs{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     a{
+          font-family: $ff-roboto;
+          color: var(--color-gray-txt);
+          @include adaptiv-value('font-size', 16, 12, 1);
+          line-height: 130%;
+          font-weight: 400;
+          letter-spacing: 0%;
+          text-decoration: none;
+          @include hover('color', var(--color-violet));
+          @include transition($transition-3);
+          &:not(:last-child){
+               &::after{
+                    @extend .bootsrtap-icon;
+                    content: "\F285";
+                    font-size: .875rem;
+               }
+          }
+          &::after{
+               margin: 0 4px;
+          }
+          &:last-child{
+               color: var(--color-black);
+          }
+     }
+}

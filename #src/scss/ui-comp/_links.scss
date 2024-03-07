@@ -1,0 +1,53 @@
+.link-header {
+     text-underline-offset: 6px;
+     text-decoration: underline 1px solid transparent;
+     @include hover('text-decoration-color', var(--color-violet));
+}
+.link {
+}
+.link-header, .link{
+     color: var(--color-black);
+     @include hover('color', var(--color-violet));
+}
+.link, .link-footer{
+     text-decoration: none;
+}
+.link-header, .link, .link-footer{
+     font-family: $ff-roboto;
+     font-weight: 400;
+     line-height: 130%;
+     letter-spacing: 0%;
+     text-align: left;
+     @include transition(#{$transition-3});
+     @include adaptiv-value('font-size', 16, 14, 1);
+}
+
+.link-footer {
+     color: var(--color-white);
+     @include hover('color', var(--color-gold-light));
+}
+.link-footer-button{
+     @include adaptiv-value('font-size', 24, 18, 1);
+     font-family: $ff-exo;
+     line-height: 120%;
+     font-weight: 600;
+}
+
+.header-contact{
+     font-family: $ff-roboto;
+     font-size: 16px;
+     font-weight: 600;
+     line-height: 130%;
+     letter-spacing: 0%;
+     text-decoration: none;
+     @include hover('color', var(--color-violet));
+     @include adaptiv-value('font-size', 16, 12, 1);
+}
+
+// a{
+//      @include transition($transition-3);
+// }
+
+// a:not(.color-violet){
+//      @include hover('color', var(--color-violet));
+// }

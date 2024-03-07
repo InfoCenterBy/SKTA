@@ -1,0 +1,15 @@
+.main-banner {
+     &__text {
+          @include adaptiv-value('font-size', 34, 24, 1);
+          font-weight: 600;
+          line-height: 130%;
+     }
+     &__text, &__sub{
+          letter-spacing: 0%;
+     }
+     &__sub {
+          @include adaptiv-value('font-size', 18, 14, 1);
+          font-weight: 400;
+          line-height: 120%;
+     }
+}
