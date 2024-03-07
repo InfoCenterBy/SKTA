@@ -98,6 +98,11 @@ component;
           box-shadow: none;
 }
 
+.footer {
+  margin-top: 6.25rem;
+  padding: 3rem 0 2.5rem 0;
+}
+
 .button {
   padding: 0.75rem 1.5rem;
   border-radius: 6.25rem;
@@ -432,6 +437,54 @@ component;
   min-height: 450px;
 }
 
+.main-support-block {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  color: var(--color-gray-txt);
+  -webkit-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.main-support-block__img img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.main-slider .swiper {
+  height: 150px;
+}
+
+.main-slider .swiper-button-next,
+.main-slider .swiper-button-prev {
+  width: auto;
+  height: auto;
+}
+
+.main-slider .swiper-button-next:after,
+.main-slider .swiper-rtl .swiper-button-prev:after {
+  content: "";
+}
+
+.main-slider .swiper-button-next:after,
+.main-slider .swiper-button-prev:after {
+  content: "";
+}
+
+.main-slider .slider-inner-text span {
+  font-size: 20px;
+}
+
+.main-slider .swiper-slide {
+  overflow: hidden;
+}
+
+.main-slider .swiper-slide img {
+  max-width: 220px;
+  width: 100%;
+  height: 100%;
+}
+
 .modal-content {
   border-radius: 0;
 }
@@ -493,11 +546,11 @@ main {
   font-size: 16px;
 }
 
-main section:not(:first-child) {
-  margin-top: 6.25rem;
+section:not(:first-child) {
+  margin-top: 5rem;
 }
 
-main section:first-child {
+section:first-child {
   margin-top: 3.25rem;
 }
 
@@ -523,6 +576,10 @@ a {
   border: 1.5px solid #E31B1B;
 }
 
+.border-color-red-error {
+  border-color: #E31B1B;
+}
+
 .bg-black {
   background-color: #030303;
 }
@@ -533,6 +590,10 @@ a {
 
 .border-1-5-black {
   border: 1.5px solid #030303;
+}
+
+.border-color-black {
+  border-color: #030303;
 }
 
 .bg-white {
@@ -547,6 +608,10 @@ a {
   border: 1.5px solid #FBFBFB;
 }
 
+.border-color-white {
+  border-color: #FBFBFB;
+}
+
 .bg-gray-txt {
   background-color: #66605B;
 }
@@ -557,6 +622,10 @@ a {
 
 .border-1-5-gray-txt {
   border: 1.5px solid #66605B;
+}
+
+.border-color-gray-txt {
+  border-color: #66605B;
 }
 
 .bg-gray-input {
@@ -571,6 +640,10 @@ a {
   border: 1.5px solid #B9B9B9;
 }
 
+.border-color-gray-input {
+  border-color: #B9B9B9;
+}
+
 .bg-gray-stroke {
   background-color: #DADADA;
 }
@@ -581,6 +654,10 @@ a {
 
 .border-1-5-gray-stroke {
   border: 1.5px solid #DADADA;
+}
+
+.border-color-gray-stroke {
+  border-color: #DADADA;
 }
 
 .bg-gray-illustr {
@@ -595,6 +672,10 @@ a {
   border: 1.5px solid #F0F0F0;
 }
 
+.border-color-gray-illustr {
+  border-color: #F0F0F0;
+}
+
 .bg-dark-violet {
   background-color: #2A2B87;
 }
@@ -605,6 +686,10 @@ a {
 
 .border-1-5-dark-violet {
   border: 1.5px solid #2A2B87;
+}
+
+.border-color-dark-violet {
+  border-color: #2A2B87;
 }
 
 .bg-violet {
@@ -619,6 +704,10 @@ a {
   border: 1.5px solid #5E60CE;
 }
 
+.border-color-violet {
+  border-color: #5E60CE;
+}
+
 .bg-violet-hover {
   background-color: #8C8EEA;
 }
@@ -629,6 +718,10 @@ a {
 
 .border-1-5-violet-hover {
   border: 1.5px solid #8C8EEA;
+}
+
+.border-color-violet-hover {
+  border-color: #8C8EEA;
 }
 
 .bg-violet-light {
@@ -643,6 +736,10 @@ a {
   border: 1.5px solid #D6D6FF;
 }
 
+.border-color-violet-light {
+  border-color: #D6D6FF;
+}
+
 .bg-gold-light {
   background-color: #F9B974;
 }
@@ -653,6 +750,14 @@ a {
 
 .border-1-5-gold-light {
   border: 1.5px solid #F9B974;
+}
+
+.border-color-gold-light {
+  border-color: #F9B974;
+}
+
+.border-15 {
+  border-radius: 15px;
 }
 
 .border-20 {
@@ -679,6 +784,10 @@ a {
 .transition-3 {
   -webkit-transition: all ease-out .3s;
   transition: all ease-out .3s;
+}
+
+.fs-10 {
+  font-size: 0.625rem;
 }
 
 .fs-12 {
@@ -820,6 +929,10 @@ a {
   .main-banner__sub {
     font-size: calc(14px + 4 * (100vw - 320px) / 1080);
   }
+
+  .main-slider .slider-inner-text span {
+    font-size: calc(14px + 6 * (100vw - 320px) / 1080);
+  }
 }
 
 @media screen and (max-width: 910px) {
@@ -880,6 +993,15 @@ a {
 
   .news-block:hover {
     border: 1.5px solid var(--color-violet);
+  }
+
+  .main-support-block:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+
+  .main-support-block:hover {
+    color: var(--color-black);
   }
 
   .hover-red-error:hover {
@@ -1031,6 +1153,15 @@ a {
 
   .news-block:active {
     border: 1.5px solid var(--color-violet);
+  }
+
+  .main-support-block:active {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+
+  .main-support-block:active {
+    color: var(--color-black);
   }
 
   .hover-red-error:active {
