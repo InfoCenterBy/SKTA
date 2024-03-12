@@ -547,6 +547,15 @@ header.header .link-header {
   width: 100%;
 }
 
+.sys-icon {
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.875rem;
+  border-radius: 50%;
+}
+
 .modal-content {
   border-radius: 0;
 }
@@ -1009,6 +1018,10 @@ main:has(.breadcrumbs) section:nth-of-type(2) {
 @media screen and (max-width: 910px) {
   .button {
     padding: 0.625rem 0.75rem;
+  }
+
+  .sys-icon {
+    padding: 0.5rem;
   }
 }
 
