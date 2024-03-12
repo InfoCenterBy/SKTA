@@ -487,6 +487,66 @@ header.header .link-header {
   height: 100%;
 }
 
+.pagination {
+  --bs-pagination-padding-x: 1rem;
+  --bs-pagination-padding-y: 0;
+  --bs-pagination-font-size: 1rem;
+  --bs-pagination-color: var(--color-black);
+  --bs-pagination-bg: transparent;
+  --bs-pagination-border-width: 0px;
+  --bs-pagination-border-color: transparent;
+  --bs-pagination-border-radius: 0.375rem;
+  --bs-pagination-hover-color: var(--color-white);
+  --bs-pagination-hover-bg: var(--color-violet-hover);
+  --bs-pagination-hover-border-color: transparent;
+  --bs-pagination-focus-color: var(--color-white);
+  --bs-pagination-focus-bg: var(--color-violet);
+  --bs-pagination-focus-box-shadow: none;
+  --bs-pagination-active-color: var(--color-white);
+  --bs-pagination-active-bg: var(--color-violet);
+  --bs-pagination-active-border-color: inherit;
+  --bs-pagination-disabled-color: var(--color-gray-input);
+  --bs-pagination-disabled-bg: transparent;
+  --bs-pagination-disabled-border-color: transparent;
+  -webkit-column-gap: 0.25rem;
+     -moz-column-gap: 0.25rem;
+          column-gap: 0.25rem;
+}
+
+.page-link {
+  outline: 1px solid transparent;
+  border: 0;
+  border-radius: 50%;
+  line-height: 100%;
+  height: 42px;
+  min-width: 42px;
+  display: grid;
+  place-items: center;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 50px;
+}
+
+.page-item:first-child .page-link {
+  border-radius: 50px;
+}
+
+.news-inner-text {
+  margin-top: 2rem;
+}
+
+.news-inner-text p {
+  margin-bottom: 1.5rem;
+}
+
+.news-inner-text img {
+  max-width: 700px;
+  width: 100%;
+}
+
 .modal-content {
   border-radius: 0;
 }
@@ -561,6 +621,14 @@ a {
   text-decoration: none;
   -webkit-transition: all ease-out 0.2s;
   transition: all ease-out 0.2s;
+}
+
+main:has(.breadcrumbs) section:first-child {
+  margin-top: 2.5rem;
+}
+
+main:has(.breadcrumbs) section:nth-of-type(2) {
+  margin-top: 2rem;
 }
 
 .ui-page {
@@ -941,6 +1009,13 @@ a {
 @media screen and (max-width: 910px) {
   .button {
     padding: 0.625rem 0.75rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pagination {
+    --bs-pagination-font-size: .75rem;
+    --bs-pagination-padding-x: .5rem;
   }
 }
 
