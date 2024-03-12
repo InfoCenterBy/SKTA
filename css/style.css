@@ -22,6 +22,7 @@ component;
 
 .bootsrtap-icon,
 .breadcrumbs a:not(:last-child)::after,
+.breadcrumbs div:not(:last-child)::after,
 .button-arrow::before,
 .button-serach::before {
   display: inline-block;
@@ -255,7 +256,8 @@ header.header .link-header {
       flex-wrap: wrap;
 }
 
-.breadcrumbs a {
+.breadcrumbs a,
+.breadcrumbs div {
   font-family: "Roboto";
   color: var(--color-gray-txt);
   font-size: 16px;
@@ -267,16 +269,19 @@ header.header .link-header {
   transition: all ease-out 0.3s;
 }
 
-.breadcrumbs a:not(:last-child)::after {
+.breadcrumbs a:not(:last-child)::after,
+.breadcrumbs div:not(:last-child)::after {
   content: "\f285";
   font-size: 0.875rem;
 }
 
-.breadcrumbs a::after {
+.breadcrumbs a::after,
+.breadcrumbs div::after {
   margin: 0 4px;
 }
 
-.breadcrumbs a:last-child {
+.breadcrumbs a:last-child,
+.breadcrumbs div:last-child {
   color: var(--color-black);
 }
 
@@ -554,6 +559,25 @@ header.header .link-header {
   height: 4rem;
   padding: 0.875rem;
   border-radius: 50%;
+}
+
+.search-block-elem:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.search-block-elem {
+  display: block;
+  border-bottom: 1px solid var(--color-gray-stroke);
+  padding: 1rem 0;
+}
+
+.search-block-elem__title {
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
+}
+
+.search-block-elem__link div {
+  pointer-events: none;
 }
 
 .modal-content {
@@ -970,7 +994,8 @@ main:has(.breadcrumbs) section:nth-of-type(2) {
     font-size: calc(12px + 4 * (100vw - 320px) / 1080);
   }
 
-  .breadcrumbs a {
+  .breadcrumbs a,
+  .breadcrumbs div {
     font-size: calc(12px + 4 * (100vw - 320px) / 1080);
   }
 
@@ -1070,7 +1095,8 @@ main:has(.breadcrumbs) section:nth-of-type(2) {
     color: var(--color-violet);
   }
 
-  .breadcrumbs a:hover {
+  .breadcrumbs a:hover,
+  .breadcrumbs div:hover {
     color: var(--color-violet);
   }
 
@@ -1093,6 +1119,10 @@ main:has(.breadcrumbs) section:nth-of-type(2) {
 
   .main-support-block:hover {
     color: var(--color-black);
+  }
+
+  .search-block-elem:hover .search-block-elem__title {
+    color: var(--color-violet);
   }
 
   .hover-red-error:hover {
@@ -1230,7 +1260,8 @@ main:has(.breadcrumbs) section:nth-of-type(2) {
     color: var(--color-violet);
   }
 
-  .breadcrumbs a:active {
+  .breadcrumbs a:active,
+  .breadcrumbs div:active {
     color: var(--color-violet);
   }
 
@@ -1253,6 +1284,10 @@ main:has(.breadcrumbs) section:nth-of-type(2) {
 
   .main-support-block:active {
     color: var(--color-black);
+  }
+
+  .search-block-elem:active .search-block-elem__title {
+    color: var(--color-violet);
   }
 
   .hover-red-error:active {
