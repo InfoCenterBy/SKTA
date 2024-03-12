@@ -19,6 +19,7 @@ html,
 body {
 	min-width: $minWidth;
      width: 100%;
+     background-color: var(--color-white);
 }
 body{
      font-size: $fontSize;
@@ -26,11 +27,11 @@ body{
      flex-direction: column;
      min-height: 100vh;
 }
-@media (hover: none) {
-     a:hover{
-          pointer-events: none;
-     }
-}
+// @media (hover: none) {
+//      a:hover{
+//           pointer-events: none;
+//      }
+// }
 a{
      &:hover{
           // color: var(--color-violet);
@@ -103,6 +104,15 @@ a{
 // .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
      
 // }
+
+main:has(.breadcrumbs){
+     section:first-child{
+          margin-top: 2.5rem;
+     }
+     section:nth-of-type(2){
+          margin-top: 2rem;
+     }
+}
 
 @import './pages/ui-page.scss';
 @import './veriables/veriables-mix';

@@ -1,0 +1,11 @@
+.sys-icon {
+     display: grid;
+     place-items: center;
+     width: 4rem;
+     height: 4rem;
+     padding: .875rem;
+     @media #{$ui-tablet} {
+          padding: .5rem;
+     }
+     border-radius: 50%;
+}

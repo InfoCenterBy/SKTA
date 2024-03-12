@@ -1,0 +1,39 @@
+.search-block {
+}
+
+.search-block-elem:not(:first-child){
+     margin-top: 2rem;
+}
+
+.search-block-elem {
+     display: block;
+     border-bottom: 1px solid var(--color-gray-stroke);
+     padding: 1rem 0;
+     @media (hover: hover) and (pointer: fine) {
+		&:hover{
+			.search-block-elem__title{
+                    color: var(--color-violet);
+               }
+		}
+	}
+	@media (hover: none) {
+		&:active{
+			.search-block-elem__title{
+                    color: var(--color-violet);
+               }
+		}
+	}
+		&__title {
+               @include transition($transition-2);
+		}
+
+		&__text {
+		}
+
+		&__link {
+               div{
+                    pointer-events: none;
+                    // @include hover('color', var(--color-violet));
+               }
+		}
+}

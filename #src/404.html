@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+     @@include('./html-comp/_head.html',{
+          "title":"Страница не найдена",
+     })
+<body>
+     @@include('./html-comp/_header.html')
+     <main>
+          <section class="container">
+               <div class="row justify-content-center">
+                    <div class="col-lg-5 d-flex align-items-center justify-content-center">
+                         <picture>
+                              <source media="(min-width: 1200px)" srcset="./img/svg/404.svg">
+                              <img src="./img/png/404.png" alt="main-banner" class="w-100">
+                         </picture>
+                    </div>
+                    <div class="col-lg-5 d-flex align-items-center justify-content-center">
+                         <div class="d-flex flex-column">
+                              <h2 class="d-block h2-section ff-exo text-uppercase fw-semibold color-violet">
+                                   Страница не найдена
+                              </h2>
+                              <p class="ff-roboto color-black mb-0 mt-3">
+                                   К сожалению, такой страницы не существует. <br>
+                                   Вероятно она была удалена или вы ввели некорректный адрес
+                              </p>
+                              <div class="col-xl-6 col-lg-7 col-12">
+                                   <a href="./main.html" class="button button-full mt-4 w-100">Вернуться на главную</a>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+     </main>
+     @@include('./html-comp/_footer.html')
+     @@include('./html-comp/_script.html')
+</body>
+</html>

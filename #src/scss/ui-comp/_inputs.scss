@@ -12,7 +12,7 @@
      left: 16px;
      top: 13px;
      padding:0 5px;
-     background:var(--color-white);
+     background-color:var(--color-white);
      @include transition($transition-2);
 }
 .floating-input {
@@ -21,15 +21,15 @@
      width:100%;
      @include adaptiv-value('height', 48, 40, 1);
      padding: 0 1rem;
-     background: var(--color-white);
+     background-color: var(--color-white);
      color: var(--color-gray-txt);
-     border: 2px solid var(--color-gray-stroke);
+     border: 1.5px solid var(--color-gray-stroke);
      border-radius: 9.375rem;
      box-sizing: border-box;
      @include transition($transition-2);
      &:focus{
           outline:none;
-          border: 2px solid var(--color-violet);
+          border: 1.5px solid var(--color-violet);
           ~ .floating-label{
                top:-8px;
                @include adaptiv-value('font-size', 12, 10, 1);

@@ -96,9 +96,6 @@
 		}
 	}
 	@media (hover: none) {
-		&:hover{
-			pointer-events: none;
-		}
 		&:active{
 			#{$prop}: $val;
 		}
