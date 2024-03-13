@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+     <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="format-detection" content="telephone=yes" />
+     <meta property="og:image" content="./img/png/header-logo.png" />
+     <meta property="og:title" content="Система контроля торговых автоматов">
+     <meta property="og:type" content="website">
+     <meta name="description" content="Система контроля торговых автоматов">
+     <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg">
+     <link rel="icon" type="image/png" href="./img/favicon/favicon.png">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+          integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+     <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+     />
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <link rel="stylesheet" @@style-path />
+     <link rel="stylesheet" href="css/style.css" />
+     <title>Вопрос-ответ</title>
+</head>
+<body>
+     <header class="header">
+     <div class="container">
+          <div class="row justify-content-between align-items-center py-3">
+               <div class="header-logo d-flex flex-row align-items-center col-xl-3 col-lg-1 col-3">
+                    <picture>
+                         <source media="(min-width: 1200px)" srcset="./img/svg/header-logo.svg">
+                         <img src="./img/png/header-logo.png" alt="header-logo">
+                    </picture>
+                    <p class="mb-0 ms-2 d-xl-block d-none">
+                         Республиканское унитарное предприятие <br> «Информационно-издательский центр <br> по налогам и сборам»
+                    </p>
+               </div>
+               <div class="d-flex flex-column col-lg-11 col-xl-9 col-6">
+                    <div class="d-flex flex-row w-100 justify-content-md-between justify-content-center ">
+                         <div class="search-block col-xl-5 col-lg-3 d-lg-block d-none">
+                              <form class="form-group d-flex flex-row align-items-center w-100">
+                                   <div class="floating-label-content w-100">
+                                        <input class="floating-input" type="text" placeholder="">
+                                        <label class="floating-label">Поиск</label>
+                                   </div>
+                                   <div class="ms-2">
+                                        <button class="button-serach" type="submit"></button>
+                                   </div>
+                              </form>
+                         </div>
+                         <div class="d-md-block d-none">
+                              <p class="mb-0 color-gray-txt ff-roboto fs-14">
+                                   Пн-Чт: с 8:45 до 18:00 <br> 
+                                   Пт: с 8:45 до 16:45
+                              </p>
+                         </div>
+                         <div class="d-flex flex-column justify-content-center">
+                              <a href="tel:+8 (017) 234–42–54" class="header-contact color-violet">8 (017) 234–42–54</a>
+                              <a href="mailto:info@ckta.by" class="header-contact color-violet">info@ckta.by</a>
+                         </div>
+                         <div class="d-lg-block d-none">
+                              <a href="https://new.ckta.by/" class="button button-full">
+                                   Войти с ЭЦП
+                              </a>
+                         </div>
+                    </div>
+                    <div class="w-100 mt-3 d-lg-block d-none">
+                         <nav class="header-nav d-flex flex-row justify-content-between">
+                              <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                                   О системе
+                              </a>
+                              <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                                   Как подключиться
+                              </a>
+                              <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                                   Документы
+                              </a>
+                              <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                                   Тарифы и способы оплаты
+                              </a>
+                              <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                                   Вопрос-ответ
+                              </a>
+                              <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                                   Новости
+                              </a>
+                              <a href="#" target="_blank" rel="noopener noreferrer" class="link-header">
+                                   Контакты
+                              </a>
+                         </nav>
+                    </div>
+               </div>
+               <div class="d-lg-none d-flex justify-content-end align-items-start col-3">
+                    <button class="mobile-search mobile-menu" type="button" data-bs-toggle="modal" data-bs-target="#mobileSearch">
+                         <i class="bi bi-search"></i>
+                    </button>
+                    <button  type="button" class="mobile-btn mobile-menu" data-bs-toggle="modal" data-bs-target="#mobileMenu">
+                         <i class="bi bi-list"></i>
+                    </button>
+               </div>
+          </div>
+     </div>
+</header>
+
+<div class="modal fade" id="mobileMenu" tabindex="-1" aria-labelledby="mobileMenuLabel" aria-hidden="true">
+     <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content bg-violet">
+               <div class="modal-header bg-white px-4">
+                    <picture>
+                         <source media="(min-width: 1200px)" srcset="./img/svg/header-logo.svg">
+                         <img src="./img/png/header-logo.png" alt="header-logo">
+                    </picture>
+                    <div class="d-flex flex-column justify-content-center">
+                         <a href="tel:+8 (017) 234–42–54" class="header-contact color-violet">8 (017) 234–42–54</a>
+                         <a href="mailto:info@ckta.by" class="header-contact color-violet">info@ckta.by</a>
+                    </div>
+                    <div class="">
+                         <button class="mobile-search mobile-menu" type="button" data-bs-toggle="modal" data-bs-target="#mobileSearch">
+                              <i class="bi bi-search"></i>
+                         </button>
+                         <button type="button" class="btn-close ms-1" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+               </div>
+               <div class="modal-body px-4 d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column gap-3 mt-5">
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              О системе
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Как подключиться
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Документы
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Тарифы и способы оплаты
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Вопрос-ответ
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              Новости
+                         </a>
+                         <a href="#" class="link-footer text-uppercase fs-20">
+                              контакты
+                         </a>
+                         <div class="d-flex justify-content-start w-100 mt-4">
+                              <a href="#" class="button button-empty py-3 px-5 fs-18 w-100">Войти с ЭЦП</a>
+                         </div>
+                    </div>
+
+                                   </div>
+          </div>
+     </div>
+</div>
+
+<div class="modal fade" id="mobileSearch" tabindex="-1" aria-labelledby="mobileSearchLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+          <div class="modal-content px-sm-4 px-2">
+               <div class="modal-header">
+                    <form class="form-group d-flex flex-row align-items-center w-100">
+                         <div class="floating-label-content w-100">
+                              <input class="floating-input" type="text" placeholder="">
+                              <label class="floating-label">Поиск</label>
+                         </div>
+                         <div class="ms-2">
+                              <button class="button-serach" type="submit"></button>
+                         </div>
+                    </form>
+                    <button type="button" class="btn-close  ms-md-4 ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+          </div>
+     </div>
+</div>
+     <main>
+          <section class="container">
+               <div class="breadcrumbs">
+                    <a href="./main.html">Главная</a>
+                    <a href="./questions-page.html">Вопрос-ответ</a>
+               </div>
+          </section>
+          <section class="container">
+               <div class="">
+                    <h2 class="h2-section ff-exo text-uppercase fw-semibold color-black">
+                         Вопрос-ответ
+                    </h2>
+               </div>
+               <div class="mt-4">
+                    <div class="accordion ff-roboto d-flex flex-column gap-4 accordion-question" id="accordionQuestion">
+     <div class="accordion-item">
+          <h2 class="accordion-header">
+               <button 
+                    class="accordion-button fw-semibold" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseOne" 
+                    aria-expanded="true" 
+                    aria-controls="collapseOne">
+                    Какие расходы связаны с установкой СКНО?
+               </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionQuestion">
+               <div class="accordion-body">
+                    Установка СКНО в торговые автоматы не создает субъектам, применяющим торговые автоматы, 
+                    дополнительных забот технического либо иного характера. Все работы, 
+                    связанные с приобретением и установкой СКНО в торговые автоматы, проводятся 
+                    РУП ИИЦ. За СКНО вносится залоговая стоимость, которая, в случае снятия СКНО, 
+                    возвращается субъекту. В соответствии с заключенным договором, 
+                    ежемесячно взимается абонентская плата за информационное 
+                    обслуживание в размере, определенном 
+                    действующим <a href="" target="_blank" rel="noopener noreferrer" class="color-violet">Прейскурантом</a>.
+               </div>
+          </div>
+     </div>
+     <div class="accordion-item">
+          <h2 class="accordion-header">
+               <button 
+                    class="accordion-button fw-semibold collapsed" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseTwo" 
+                    aria-expanded="false" 
+                    aria-controls="collapseTwo">
+                    В чем преимущества использования СКНО?
+               </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+               <div class="accordion-body">
+                    Созданная система является альтернативой встраивания в торговые автоматы 
+                    кассового оборудования, что позволит субъектам, использующим торговые 
+                    автоматы, избежать издержек, связанных с: <br>
+                    а) оплатой стоимости кассового оборудования 
+                    (за СКНО вносится залоговая стоимость, которая при снятии СКНО возвращается владельцу торгового автомата); <br>
+                    б) необходимостью замены кассового оборудования 
+                    в связи с истечением срока нахождения модели (модификации) 
+                    данного кассового оборудования в Государственном реестре моделей 
+                    (модификаций) кассовых суммирующих аппаратов и специальных компьютерных систем, 
+                    используемых на территории Республики Беларусь (СКНО может использоваться без ограничения срока его применения); <br>
+                    в) приобретением и установкой чековых лент 
+                    во встроенное кассовое оборудование для формирования 
+                    и выдачи покупателю платежного документа (при применении 
+                    СКНО такая обязанность отсутствует); <br>
+                    г) хранением в течение 12 месяцев со дня формирования 
+                    контрольных лент, суточных (сменных) отчетов 
+                    (Z-отчетов) при их распечатке (при применении СКНО 
+                    такая обязанность отсутствует, так как вся информация 
+                    о денежных оборотах торговых автоматов сохраняется в ЦОД).
+               </div>
+          </div>
+     </div>
+     <div class="accordion-item">
+          <h2 class="accordion-header">
+               <button 
+                    class="accordion-button fw-semibold collapsed" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseThree" 
+                    aria-expanded="false" 
+                    aria-controls="collapseThree">
+                    Торговые автоматы должны быть оснащены средством контроля налоговых органов — позаботьтесь об этом своевременно
+               </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionQuestion">
+               <div class="accordion-body">
+                    В соответствии с законодательством Республики Беларусь 
+                    с 1 июля 2012 г. применение автоматических электронных 
+                    аппаратов, торговых автоматов, оснащенных 
+                    купюроприемником/монетоприемником (далее — торговые автоматы), 
+                    для продажи товаров, выполнения работ, оказания услуг возможно 
+                    только со встроенным кассовым оборудованием либо со средством контроля налоговых органов. <br>
+                    Справочно. Данная обязанность установлена 
+                    подпунктом 2.2 пункта 2 постановления Совета 
+                    Министров Республики Беларусь и Национального банка 
+                    Республики Беларусь от 06.07.2011 № 924/16 «Об использовании 
+                    кассового оборудования, платежных терминалов, автоматических 
+                    электронных аппаратов, торговых автоматов и о приеме 
+                    наличных денежных средств, банковских пластиковых карточек 
+                    в качестве средства осуществления расчетов на территории 
+                    Республики Беларусь при продаже товаров, выполнении работ, 
+                    оказании услуг, осуществлении деятельности в сфере игорного 
+                    бизнеса, лотерейной деятельности, проведении электронных 
+                    интерактивных игр», согласно которому юридические лица 
+                    и индивидуальные предприниматели с 1 июля 2012 г. при продаже 
+                    товаров, выполнении работ, оказании услуг принимают наличные 
+                    денежные средства и (или) банковские пластиковые карточки 
+                    в качестве средства осуществления расчетов на территории 
+                    Республики Беларусь с применением автоматических электронных 
+                    аппаратов, торговых автоматов со встроенным кассовым 
+                    оборудованием для обеспечения регистрации и некорректируемого 
+                    учета принятых наличных денежных средств и печати платежного 
+                    документа либо со средством контроля налоговых органов. <br>
+                    Средство контроля налоговых органов (далее — СКНО) – 
+                    специальное устройство, которое посредством сотовой 
+                    подвижной электросвязи обеспечивает дистанционную передачу 
+                    данных о выручке, полученной с использованием торговых автоматов, 
+                    в центр обработки данных (далее — ЦОД). ЦОД предназначен 
+                    для хранения и обработки информации о денежном обороте 
+                    в сфере вендингового бизнеса. Функции ЦОД возложены 
+                    на РУП «Информационно-издательский центр по налогам 
+                    и сборам» (далее — РУП ИИЦ). <br>
+                    Работа над созданием системы контроля торговых автоматов 
+                    (далее — система) была организована с учетом международной 
+                    практики использования подобных систем и ведется в тесном 
+                    взаимодействии с субъектами предпринимательской деятельности, 
+                    осуществляющими деятельность в сфере вендинга (торговли 
+                    с применением торговых автоматов). Рабочей группой 
+                    проводились встречи-совещания с представителями вендинговых 
+                    компаний, на которых обсуждались вопросы подключения торговых 
+                    автоматов к системе, установки и обслуживания СКНО, предполагаемой стоимости этих работ.
+               </div>
+          </div>
+     </div>
+</div>
+               </div>
+          </section>
+          <section class="container">
+               <div class="d-flex flex-row align-items-center gap-2 main-slider">
+
+          <div class="swiper-button-prev position-static button-arrow button-left p-2 fs-18"></div>
+
+     <div class="swiper w-100 ff-exo">
+          <div class="swiper-wrapper">
+               <a href="#" class="swiper-slide border-15 d-flex justify-content-center align-items-center">
+                    <img src="./img/png/slider-img-1.png" alt="slider-img">
+               </a>
+               <a href="#" class="swiper-slide border-15 bg-gray-illustr d-flex justify-content-center align-items-center">
+                    <div class="slider-inner-text text-center p-2">
+                         <p class="mb-2 fs-16 color-black fw-semibold">
+                              Здесь может быть <br> 
+                              ваша реклама
+                         </p>
+                         <span
+                              class="fw-semibold text-uppercase lh-sm color-dark-violet">8 (017) 269–19–08</span>
+                    </div>
+               </a>
+               <a href="#" class="swiper-slide border-15 d-flex justify-content-center align-items-center">
+                    <img src="./img/png/slider-img-2.png" alt="slider-img">
+               </a>
+               <a class="swiper-slide border-15 bg-gray-illustr d-flex justify-content-center align-items-center">
+                    <div class="slider-inner-text text-center p-2">
+                         <p class="mb-2 fs-16 color-black fw-semibold">
+                              Здесь может быть <br> 
+                              ваша реклама
+                         </p>
+                         <span
+                              class="fw-semibold text-uppercase lh-sm color-dark-violet">8 (017) 269–19–08</span>
+                    </div>
+               </a>
+               <a href="#" class="swiper-slide border-15 d-flex justify-content-center align-items-center">
+                    <img src="./img/png/slider-img-3.png" alt="slider-img">
+               </a>
+               <a href="#" class="swiper-slide border-15 bg-gray-illustr d-flex justify-content-center align-items-center">
+                    <div class="slider-inner-text text-center p-2">
+                         <p class="mb-2 fs-16 color-black fw-semibold">
+                              Здесь может быть <br> 
+                              ваша реклама
+                         </p>
+                         <span
+                              class="fw-semibold text-uppercase lh-sm color-dark-violet">8 (017) 269–19–08</span>
+                    </div>
+               </a>
+               <a href="#" class="swiper-slide border-15 d-flex justify-content-center align-items-center">
+                    <img src="./img/png/slider-img-2.png" alt="slider-img">
+               </a>
+          </div>
+     </div>
+
+          <div class="swiper-button-next position-static button-arrow button-right p-2 fs-18"></div>
+
+</div>
+          </section>
+     </main>
+     <footer class="footer bg-violet">
+     <div class="container">
+          <div class="row justify-content-between">
+               <div class="col-lg-3 my-2">
+                    <div class="d-flex flex-row align-items-center">
+                              <img src="./img/svg/footer-logo.svg" alt="footer-logo">
+                         <p class="mb-0 ms-2 color-white fs-10">
+                              Республиканское унитарное предприятие <br> «Информационно-издательский центр <br> по налогам и сборам»
+                         </p>
+                    </div>
+               </div>
+               <div class="col-lg-3 my-2">
+                    <div class="d-flex flex-column gap-3">
+                         <a href="" class="link-footer">
+                              О системе
+                         </a>
+                         <a href="" class="link-footer">
+                              Как подключиться
+                         </a>
+                         <a href="" class="link-footer">
+                              Тарифы и способы оплаты
+                         </a>
+                         <a href="" class="link-footer link-footer-button">
+                              Разместить рекламу
+                         </a>
+                    </div>
+               </div>
+               <div class="col-lg-2 my-2">
+                    <div class="d-flex flex-column gap-3">
+                         <a href="" class="link-footer">
+                              Вопрос-ответ
+                         </a>
+                         <a href="" class="link-footer">
+                              Документы
+                         </a>
+                         <a href="" class="link-footer">
+                              Новости
+                         </a>
+                         <a href="" class="link-footer">
+                              Контакты
+                         </a>
+                    </div>
+               </div>
+               <div class="col-lg-3 my-2">
+                    <div class="d-flex flex-column gap-lg-3 gap-2">
+                         <div class="d-flex flex-row align-items-center gap-2">
+                              <i class="bi bi-phone color-white fs-20"></i>
+                              <a href="tel:8(017)234-42-54" class="link-footer">
+                                   8 (017) 234-42-54
+                              </a>
+                         </div>
+                         <div class="d-flex flex-row align-items-start gap-2">
+                              <i class="bi bi-calendar4 color-white fs-20"></i>
+                              <p class="mb-0 color-white">
+                                   Пн.–Чт.: с 8:45 до 18:00 <br>
+                                   Пт.: с 8:45 до 16:45
+                              </p>
+                         </div>
+                         <div class="d-flex flex-row align-items-center gap-2">
+                              <i class="bi bi-envelope color-white fs-20"></i>
+                              <a href="mailto:info@ckta.by" class="link-footer">
+                                   info@ckta.by
+                              </a>
+                         </div>
+                    </div>
+               </div>
+               <div class="col-12 mt-lg-5 mt-4">
+                    <div class="w-100 d-flex flex-row flex-wrap justify-content-between color-white gap-2">
+                         <div class="d-flex flex-row flex-wrap gap-2 order-lg-1 order-2">
+                              <span>© 2024 Все права защищены</span>
+                              <p class="mb-0 d-inline ms-lg-4 ms-0">РУП «Информационно-издательский центр по налогам и сборам»</p>
+                         </div>
+                         <div class=" order-lg-2 order-1">
+                              <a href="" class="link-footer">Политика в отношении обработки куки (cookies)</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+</footer>
+     <script src="js/script.min.js"></script>
+</body>
+</html>
