@@ -16,7 +16,8 @@ $colorsMap: ('red-error': '#E31B1B',
                'violet': '#5E60CE',
                'violet-hover': '#8C8EEA',
                'violet-light': '#D6D6FF',
-               'gold-light': '#F9B974');
+               'gold-light': '#F9B974',
+               'transparent': 'transparent');
                
 :root{
      @each $name, $color in $colorsMap {
@@ -34,7 +35,7 @@ $fontSizeMap: (10, 12, 14, 16, 18, 20, 22, 24);
 // *!------*
 
 // *? Border*
-$borderMap: ('15','20','25','30','100');
+$borderMap: ('10','15','20','25','30','100');
 // *?------*
 
 // *! Transition *

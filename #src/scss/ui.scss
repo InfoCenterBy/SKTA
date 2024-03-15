@@ -15,6 +15,8 @@
 @import './ui-comp/news-inner-text';
 @import './ui-comp/sys-page';
 @import './ui-comp/search';
+@import './ui-comp/questions';
+@import './ui-comp/cookie';
 
 .modal-content{
      border-radius: 0;
@@ -28,4 +30,10 @@
      font-size: 1.75rem;
      line-height: 130%;
      letter-spacing: 0;
+}
+
+.after-no{
+     &::after{
+          content: none;
+     }
 }
