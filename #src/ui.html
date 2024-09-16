@@ -69,6 +69,12 @@
                computed: {},
                mounted() {
                     this.loadHtmlFiles();
+                    document.querySelectorAll('.close-alert').forEach((element) => {
+                         element.addEventListener('click', () => {
+                              var alertNode = document.querySelector('#alertCookie');
+                              alertNode.classList.remove('show')
+                         });
+                    });
                },
           })
      </script>

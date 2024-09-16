@@ -1,7 +1,7 @@
 
 
 <div class="container fixed-bottom m-auto">
-     <div class="alert bg-violet-light alert-dismissible fade show border-20 p-3 px-lg-3 px-2 ff-roboto" role="alert">
+     <div class="alert bg-violet-light alert-dismissible fade show border-20 p-3 px-lg-3 px-2 ff-roboto" role="alert" id="alertCookie">
           <div class="w-100 d-flex flex-row flex-wrap justify-content-between align-content-center gap-3">
                <div class="col-lg-7">
                     <p class="mb-0">
@@ -41,8 +41,13 @@
      <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content border-10 border-0">
                <div class="modal-header border-0 align-items-start">
-                    <h2 class="h2-section fs-24 ff-exo text-uppercase fw-semibold" id="cookieModalLabel">Настроить cookies</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2 class="h2-section fs-24 ff-exo text-uppercase fw-semibold" id="cookieModalLabel">Настроить 
+                              cookies</h2>
+
+                              <button type="button" class="bt
+                              n-close"  data-
+                              bs-dismiss="modal" aria-
+                              label="Close"></button>
                </div>
                <div class="modal-body pt-0">
                     <p class="ff-roboto">
@@ -118,8 +123,18 @@
                     </div>
                </div>
                <div class="modal-footer border-0 justify-content-between">
-                    <button class="button button-full">Принять все</button>
-                    <button class="button button-empty">Сохранить настройки</button>
+                    <a 
+                         type="button" 
+                         class="button button-full close-alert" 
+                         id="cookieAgree" 
+                         data-bs-dismiss="modal" 
+                         aria-label="Close">Принять все</a>
+                    <a 
+                         type="button" 
+                         class="button button-empty close-alert" 
+                         id="cookieSave" 
+                         data-bs-dismiss="modal" 
+                         aria-label="Close">Сохранить настройки</a>
                </div>
           </div>
      </div>
